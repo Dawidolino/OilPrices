@@ -10,7 +10,6 @@ namespace OilPrices.Model
         public string County { get; set; } = "";
         public string City { get; set; } = "";
         public string Station { get; set; } = "";
-        public ICollection<FuelPriceModel> FuelPrices { get; set; }
     }
 
 }

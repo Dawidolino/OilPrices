@@ -14,8 +14,7 @@ namespace OilPrices.Model
         public decimal Price { get; set; } 
         public DateTime PriceEditDate { get; set; } 
 
-        // one to many relation with location
-        public LocationModel LocationModel { get; set; }
+      
     }
 
 }
