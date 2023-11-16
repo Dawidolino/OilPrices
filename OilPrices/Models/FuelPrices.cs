@@ -7,23 +7,23 @@ namespace OilPrices.Models
     public class FuelPrices
     {
         [Key]
-        public int Id { get; set; }
+        public short Id { get; set; }
 
         [ForeignKey("FuelStation")]
-        public int FuelStationId { get; set; }
-        public FuelStation FuelStation { get; set; }
+        public short FuelStationId { get; set; }
+        public FuelStation? FuelStation { get; set; } 
 
         [Column(TypeName = "nvarchar(10)")]
-        public string RON95 { get; set; }
+        public string RON95 { get; set; } = "";
 
         [Column(TypeName = "nvarchar(10)")]
-        public string RON98 { get; set; }
+        public string RON98 { get; set; } = "";
 
         [Column(TypeName = "nvarchar(10)")]
-        public string ON { get; set; }
+        public string ON { get; set; } = "";
 
         [Column(TypeName = "nvarchar(10)")]
-        public string LPG { get; set; }
+        public string LPG { get; set; } = "";
 
         public DateTime PriceEditDate { get; set; }
     }
