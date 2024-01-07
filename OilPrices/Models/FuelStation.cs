@@ -26,4 +26,6 @@ public partial class FuelStation
     public string? On { get; set; }
 
     public string? Lpg { get; set; }
+    public double Latitude { get; set; }
+    public double Longitude { get; set; }
 }

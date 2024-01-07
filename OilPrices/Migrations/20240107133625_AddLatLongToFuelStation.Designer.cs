@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using OilPrices.Models;
 
@@ -11,9 +12,11 @@ using OilPrices.Models;
 namespace OilPrices.Migrations
 {
     [DbContext(typeof(OilPricesAppContext))]
-    partial class OilPricesAppContextModelSnapshot : ModelSnapshot
+    [Migration("20240107133625_AddLatLongToFuelStation")]
+    partial class AddLatLongToFuelStation
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
