@@ -10,8 +10,7 @@ namespace OilPrices.Models
         public short Id { get; set; }
 
         [ForeignKey("FuelStation")]
-        public short FuelStationId { get; set; }
-        //public FuelStation? FuelStation { get; set; } 
+        public short FuelStationId { get; set; }       
 
         [Column(TypeName = "nvarchar(10)")]
         public string RON95 { get; set; } = "";
