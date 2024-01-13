@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,7 +9,7 @@ using OilPrices.Models;
 
 namespace OilPrices.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[fuelstations]")]
     [ApiController]
     public class FuelStationsController : ControllerBase
     {

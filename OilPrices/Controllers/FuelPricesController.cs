@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,7 +9,7 @@ using OilPrices.Models;
 
 namespace OilPrices.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[fuelprices]")]
     [ApiController]
     public class FuelPricesController : ControllerBase
     {
@@ -49,8 +49,7 @@ namespace OilPrices.Controllers
             return fuelPrices;
         }
 
-        // PUT: api/FuelPrices/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        // PUT: api/FuelPrices/5        
         [HttpPut("{id}")]
         public async Task<IActionResult> PutFuelPrices(short id, FuelPrices fuelPrices)
         {
@@ -81,7 +80,6 @@ namespace OilPrices.Controllers
         }
 
         // POST: api/FuelPrices
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<FuelPrices>> PostFuelPrices(FuelPrices fuelPrices)
         {
