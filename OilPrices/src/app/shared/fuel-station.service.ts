@@ -9,7 +9,7 @@ export class FuelStationService {
 
   url:string = environment.apiBaseUrl+'/fuelstation'
   list:FuelStation[]=[]
-
+  formData : FuelStation = new FuelStation()
   constructor(private http:HttpClient) { }
 
   refreshList(){
