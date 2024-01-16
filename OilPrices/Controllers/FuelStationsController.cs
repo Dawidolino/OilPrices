@@ -9,7 +9,7 @@ using OilPrices.Models;
 
 namespace OilPrices.Controllers
 {
-    [Route("api/[fuelstations]")]
+    [Route("api/fuelstation")]
     [ApiController]
     public class FuelStationsController : ControllerBase
     {

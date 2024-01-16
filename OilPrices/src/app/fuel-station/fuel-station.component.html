@@ -1,1 +1,21 @@
-<p>fuel-station works!</p>
+<div class="row mt-5">
+    <div class="col-6">
+        <app-fuel-station-form></app-fuel-station-form>
+    </div>
+    <div class="col-6">
+        <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-start mb-2 border px-4 py-3 rounded-3" *ngFor="let fs of service.list">
+                <div>
+                    <div><span class="fw-bold">Nazwa stacji:</span> {{fs.nazwa}}</div>
+                    <div><span class="fw-bold">Powiat:</span> {{fs.powiat}}</div>
+                    <div><span class="fw-bold">Miejscowosc:</span> {{fs.miejscowosc}}</div>
+                    <div><span class="fw-bold">Ulica:</span> {{fs.adres}}</div>
+                    <div><span class="fw-bold">Wspolrzedne:</span> {{fs.longitude}} {{fs.latitude}}</div>
+                </div>
+                <span>
+                    <i class="fa-regular fa-trash-can"></i>
+                </span>
+            </li> 
+        </ul>
+    </div>
+</div>

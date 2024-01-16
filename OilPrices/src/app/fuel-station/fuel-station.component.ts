@@ -1,12 +1,21 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { FuelStationFormComponent } from "./fuel-station-form/fuel-station-form.component";
+import { FuelStationService } from '../shared/fuel-station.service';
+import { NgFor } from '@angular/common';
 @Component({
-  selector: 'app-fuel-station',
-  standalone: true,
-  imports: [],
-  templateUrl: './fuel-station.component.html',
-  styles: ``
+    selector: 'app-fuel-station',
+    standalone: true,
+    templateUrl: './fuel-station.component.html',
+    styles: ``,
+    imports: [FuelStationFormComponent, NgFor]
 })
-export class FuelStationComponent {
+export class FuelStationComponent implements OnInit{
+    
+[x: string]: any; 
+    constructor(public service: FuelStationService){
 
+    }
+    ngOnInit(): void {
+        this.service.refreshList();
+    }
 }
