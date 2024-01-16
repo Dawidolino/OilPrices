@@ -2,3 +2,6 @@
 .list-group-item {
     overflow: auto; /* lub overflow: scroll; */
 }
+.mouse-hover{
+    cursor: pointer;
+}
