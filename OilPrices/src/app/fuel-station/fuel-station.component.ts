@@ -11,7 +11,6 @@ import { NgFor } from '@angular/common';
 })
 export class FuelStationComponent implements OnInit{
     
-[x: string]: any; 
     constructor(public service: FuelStationService){
 
     }
