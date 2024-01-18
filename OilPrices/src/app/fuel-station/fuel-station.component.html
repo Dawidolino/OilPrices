@@ -5,14 +5,15 @@
     <div class="col-6">
         <ul class="list-group">
             <li class="list-group-item d-flex justify-content-between align-items-start mb-2 border px-4 py-3 rounded-3" *ngFor="let fuelData of fuelData$ | async">
-                <div flex-grow-1 mouse-hover>
+                <div flex-grow-1 mouse-hover > 
+                    <!-- *ngIf="fuelData" -->
                     <div><span class="fw-bold">Nazwa stacji:</span> {{ fuelData.nazwa }}</div>
                     <div><span class="fw-bold">Powiat:</span> {{ fuelData.powiat }}</div>
                     <div><span class="fw-bold">Miejscowosc:</span> {{ fuelData.miejscowosc }}</div>
                     <div><span class="fw-bold">Ulica:</span> {{ fuelData.adres }}</div>
                     <div><span class="fw-bold">Wspolrzedne:</span> {{ fuelData.longitude }} {{ fuelData.latitude }}</div>
-                    <div><span class="fw-bold">Cena PB95:</span> {{ fuelData.prices.ron95 }} PLN</div>
-                    <div><span class="fw-bold">Cena PB98:</span> {{ fuelData.prices.ron98 }} PLN</div>
+                    <div><span class="fw-bold">Cena PB95:</span> {{ fuelData.prices.roN95 }} PLN</div>
+                    <div><span class="fw-bold">Cena PB98:</span> {{ fuelData.prices.roN98 }} PLN</div>
                     <div><span class="fw-bold">Cena ON</span> {{ fuelData.prices.on }} PLN</div>
                     <div><span class="fw-bold">Cena LPG:</span> {{ fuelData.prices.lpg }} PLN</div>
                 </div>
