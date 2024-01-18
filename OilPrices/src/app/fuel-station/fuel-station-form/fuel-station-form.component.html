@@ -1,5 +1,13 @@
 <form >
+    <input type="hidden" name="id" [value]="service.formData.id">
     <div class="mb-3">
+        <label> Nazwa stacji</label>
+        <input class="form-control form-control-lg"
+        placeholder="Nazwa stacji"
+        #nazwa="ngModel" name="nazwa"
+        [(ngModel)]="service.formData.nazwa">       
+    </div>
+    <!-- <div class="mb-3">
         <label> Nazwa stacji</label>
         <input class="form-control form-control-lg"
         placeholder="Nazwa stacji"
@@ -12,12 +20,5 @@
         placeholder="Nazwa stacji"
         #nazwa="ngModel" name="nazwa"
         [(ngModel)]="service.formData.nazwa">       
-    </div>
-    <div class="mb-3">
-        <label> Nazwa stacji</label>
-        <input class="form-control form-control-lg"
-        placeholder="Nazwa stacji"
-        #nazwa="ngModel" name="nazwa"
-        [(ngModel)]="service.formData.nazwa">       
-    </div>
+    </div> -->
 </form>
