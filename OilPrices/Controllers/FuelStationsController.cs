@@ -77,8 +77,8 @@ namespace OilPrices.Controllers
                 }
             }
 
-            return NoContent();
-        }
+            return Ok(await _context.FuelStations.ToListAsync());//NoContent();
+    }
 
         // POST: api/FuelStations
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
@@ -106,8 +106,8 @@ namespace OilPrices.Controllers
                 }
             }
 
-            return CreatedAtAction("GetFuelStation", new { id = fuelStation.Id }, fuelStation);
-        }
+        return Ok(await _context.FuelStations.ToListAsync());  //CreatedAtAction("GetFuelStation", new { id = fuelStation.Id }, fuelStation);
+    }
 
         // DELETE: api/FuelStations/5
         [HttpDelete("{id}")]
@@ -126,8 +126,8 @@ namespace OilPrices.Controllers
             _context.FuelStations.Remove(fuelStation);
             await _context.SaveChangesAsync();
 
-            return NoContent();
-        }
+            return Ok(await _context.FuelStations.ToListAsync()); // NoContent();
+    }
 
         private bool FuelStationExists(short id)
         {
