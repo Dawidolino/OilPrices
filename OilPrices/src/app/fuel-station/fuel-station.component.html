@@ -22,7 +22,7 @@
                     <div><span class="fw-bold">Cena LPG:</span> {{ sd.lpg === 'X' ? 'Brak dostępnej ceny' : (sd.lpg ? sd.lpg + ' PLN' : 'Brak tego typu paliwa') }}</div>
                 </div>
                 <span class="text-secondary">
-                    <i class="fa-regular fa-trash-can fa-lg mouse-hover"></i>
+                    <i class="fa-regular fa-trash-can fa-lg mouse-hover" (click)="onDelete(sd.id)"></i>
                     <i class="fa-regular fa-pen-to-square mouse-hover" (click)="populateForm(sd)"></i>
                 </span>
             </li>            

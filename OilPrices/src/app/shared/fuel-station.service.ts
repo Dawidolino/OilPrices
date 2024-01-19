@@ -12,7 +12,6 @@ export class FuelStationService {
   url:string = environment.apiBaseUrl+'/fuelstation'
   list:FuelStation[]=[]
   formData : FuelStation = new FuelStation()
-  formSubmitted : boolean = false
   constructor(private http:HttpClient) { }
 
   refreshList(){
@@ -33,10 +32,9 @@ export class FuelStationService {
   putFuelStation(){
     return this.http.put(this.url+'/'+this.formData.id, this.formData)    
   }
-  // deleteFuelStation(){
-  //   return this.http.delete(this.url+'/'+this.formData.id, this.formData)
-
-  // }
+  deleteFuelStation(id:number){
+    return this.http.delete(this.url+'/'+id)
+  }
   resetForm(form:NgForm){
     form.form.reset();  
   }

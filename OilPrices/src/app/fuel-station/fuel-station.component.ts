@@ -46,4 +46,14 @@ export class FuelStationComponent implements OnInit {
     populateForm(selectedRecord:FuelStation){
         this.service.formData= Object.assign({},selectedRecord);
     }
+    onDelete(id:number){
+      this.service.deleteFuelStation(id)
+      .subscribe({
+        next: res => {
+          this.service.list = res as FuelStation[]        
+          console.log("updated successfully")
+        },
+        error:err=> {console.log(err)}
+      })
+    }
   }
