@@ -1,6 +1,8 @@
 import { Component, NgModule } from '@angular/core';
 import { FuelStationService } from '../../shared/fuel-station.service';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
+import { FuelStation } from '../../shared/fuel-station.model';
+
 
 @Component({
   selector: 'app-fuel-station-form',
@@ -14,4 +16,39 @@ export class FuelStationFormComponent {
   constructor(public service: FuelStationService){
 
   }
+  onSubmit(form:NgForm){
+   
+    //  if (this.service.formData.id==0)
+    //  this.insertRecord(form)
+    // else
+    this.updateRecord(form)
+    
+    
+  }
+
+  // insertRecord(form: NgForm){
+  //   this.service.postFuelStation()
+  //   .subscribe({
+  //     next: res => {
+  //       this.service.list = res as FuelStation[]
+  //       this.service.resetForm(form)
+  //     },
+  //     error:err=> {console.log(err)}
+  //   })
+  // }
+
+  updateRecord(form:NgForm){
+    this.service.putFuelStation()
+    .subscribe({
+      next: res => {
+        this.service.list = res as FuelStation[]
+        this.service.resetForm(form)
+        console.log("updated successfully")
+      },
+      error:err=> {console.log(err)}
+    })
+
+  }
+
 }
+

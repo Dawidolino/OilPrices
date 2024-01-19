@@ -6,7 +6,7 @@
         <div class="mb-3">
             <label for="searchLocation">Szukaj miejscowości (nie uwzględniaj polskich znaków):</label>
             <input type="text" id="searchLocation" [(ngModel)]="searchLocation" class="form-control" />
-            <button class="btn btn-primary" (click)="searchStations()">Szukaj</button>            
+            <div class="d-grid"><button class="btn btn-primary" (click)="searchStations()">Szukaj</button></div>            
         </div>        
         <ul class="list-group">
             <li class="list-group-item d-flex justify-content-between align-items-start mb-2 border px-4 py-3 rounded-3" *ngFor="let sd of service.list"> <!--station data-->
@@ -23,7 +23,7 @@
                 </div>
                 <span class="text-secondary">
                     <i class="fa-regular fa-trash-can fa-lg mouse-hover"></i>
-                    <i class="fa-regular fa-pen-to-square" (click)="populateForm(sd)"></i>
+                    <i class="fa-regular fa-pen-to-square mouse-hover" (click)="populateForm(sd)"></i>
                 </span>
             </li>            
         </ul>

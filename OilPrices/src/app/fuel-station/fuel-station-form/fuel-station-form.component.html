@@ -1,4 +1,5 @@
-<form #form="ngForm" (submit)="onSubmit(form)">
+<form #form="ngForm" (submit)="onSubmit(form)" novalidate autocomplete="off">
+    <input type="hidden" name="id"[value]="service.formData.id">
     <div class="mb-3" >
         <label> Nazwa stacji</label>
         <input class="form-control form-control-lg" 
@@ -13,7 +14,9 @@
         placeholder="Cena PB95"
         #ron95="ngModel" name="ron95"
         [(ngModel)]="service.formData.ron95"
-        [disabled]="service.formData.ron95 === null">       
+        [disabled]="service.formData.ron95 === null"
+        maxlength="5">       
+
     </div>
     <div class="mb-3">
         <label> Cena PB98</label>
@@ -21,7 +24,8 @@
         placeholder="Cena PB98"
         #ron98="ngModel" name="ron98"
         [(ngModel)]="service.formData.ron98"
-        [disabled]="service.formData.ron98 === null">       
+        [disabled]="service.formData.ron98 === null"
+        maxlength="5">       
     </div>
     <div class="mb-3">
         <label> Cena ON</label>
@@ -29,7 +33,8 @@
         placeholder="Cena ON"
         #on="ngModel" name="on"
         [(ngModel)]="service.formData.on"
-        [disabled]="service.formData.on === null">       
+        [disabled]="service.formData.on === null"
+        maxlength="5">       
     </div>
     <div class="mb-3">
         <label> Cena LPG</label>
@@ -37,6 +42,11 @@
         placeholder="Cena LPG"
         #lpg="ngModel" name="lpg"
         [(ngModel)]="service.formData.lpg"
-        [disabled]="service.formData.lpg === null">       
+        [disabled]="service.formData.lpg === null"
+        maxlength="5">       
     </div>
+    <div class="d-grid">
+        <button class="btn btn-lg btn-success" type="submit">Zaaktualizuj ceny</button>
+    </div>
+
 </form>
