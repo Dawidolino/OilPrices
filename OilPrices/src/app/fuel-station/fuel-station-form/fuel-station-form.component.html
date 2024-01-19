@@ -1,23 +1,42 @@
-<form >
-    <div class="mb-3">
+<form #form="ngForm" (submit)="onSubmit(form)">
+    <div class="mb-3" >
         <label> Nazwa stacji</label>
-        <input class="form-control form-control-lg"
+        <input class="form-control form-control-lg" 
         placeholder="Nazwa stacji"
         #nazwa="ngModel" name="nazwa"
-        [(ngModel)]="service.formData.nazwa">       
+        [(ngModel)]="service.formData.nazwa"
+        readonly>       
     </div>
     <div class="mb-3">
-        <label> Nazwa stacji</label>
+        <label> Cena PB95</label>
         <input class="form-control form-control-lg"
-        placeholder="Nazwa stacji"
-        #nazwa="ngModel" name="nazwa"
-        [(ngModel)]="service.formData.nazwa">       
+        placeholder="Cena PB95"
+        #ron95="ngModel" name="ron95"
+        [(ngModel)]="service.formData.ron95"
+        [disabled]="service.formData.ron95 === null">       
     </div>
     <div class="mb-3">
-        <label> Nazwa stacji</label>
+        <label> Cena PB98</label>
         <input class="form-control form-control-lg"
-        placeholder="Nazwa stacji"
-        #nazwa="ngModel" name="nazwa"
-        [(ngModel)]="service.formData.nazwa">       
+        placeholder="Cena PB98"
+        #ron98="ngModel" name="ron98"
+        [(ngModel)]="service.formData.ron98"
+        [disabled]="service.formData.ron98 === null">       
+    </div>
+    <div class="mb-3">
+        <label> Cena ON</label>
+        <input class="form-control form-control-lg"
+        placeholder="Cena ON"
+        #on="ngModel" name="on"
+        [(ngModel)]="service.formData.on"
+        [disabled]="service.formData.on === null">       
+    </div>
+    <div class="mb-3">
+        <label> Cena LPG</label>
+        <input class="form-control form-control-lg"
+        placeholder="Cena LPG"
+        #lpg="ngModel" name="lpg"
+        [(ngModel)]="service.formData.lpg"
+        [disabled]="service.formData.lpg === null">       
     </div>
 </form>

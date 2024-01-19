@@ -3,24 +3,29 @@
         <app-fuel-station-form></app-fuel-station-form>
     </div>
     <div class="col-6">
+        <div class="mb-3">
+            <label for="searchLocation">Szukaj miejscowości (nie uwzględniaj polskich znaków):</label>
+            <input type="text" id="searchLocation" [(ngModel)]="searchLocation" class="form-control" />
+            <button class="btn btn-primary" (click)="searchStations()">Szukaj</button>            
+        </div>        
         <ul class="list-group">
-            <li class="list-group-item d-flex justify-content-between align-items-start mb-2 border px-4 py-3 rounded-3" *ngFor="let fuelData of fuelData$ | async">
-                <div flex-grow-1 mouse-hover > 
-                    <!-- *ngIf="fuelData" -->
-                    <div><span class="fw-bold">Nazwa stacji:</span> {{ fuelData.nazwa }}</div>
-                    <div><span class="fw-bold">Powiat:</span> {{ fuelData.powiat }}</div>
-                    <div><span class="fw-bold">Miejscowosc:</span> {{ fuelData.miejscowosc }}</div>
-                    <div><span class="fw-bold">Ulica:</span> {{ fuelData.adres }}</div>
-                    <div><span class="fw-bold">Wspolrzedne:</span> {{ fuelData.longitude }} {{ fuelData.latitude }}</div>
-                    <div><span class="fw-bold">Cena PB95:</span> {{ fuelData.prices.roN95 }} PLN</div>
-                    <div><span class="fw-bold">Cena PB98:</span> {{ fuelData.prices.roN98 }} PLN</div>
-                    <div><span class="fw-bold">Cena ON</span> {{ fuelData.prices.on }} PLN</div>
-                    <div><span class="fw-bold">Cena LPG:</span> {{ fuelData.prices.lpg }} PLN</div>
+            <li class="list-group-item d-flex justify-content-between align-items-start mb-2 border px-4 py-3 rounded-3" *ngFor="let sd of service.list"> <!--station data-->
+                <div flex-grow-1 mouse-hover >             
+                    <div><span class="fw-bold">Nazwa stacji:</span> {{ sd.nazwa }}</div>
+                    <div><span class="fw-bold">Powiat:</span> {{ sd.powiat }}</div>
+                    <div><span class="fw-bold">Miejscowosc:</span> {{ sd.miejscowosc }}</div>
+                    <div><span class="fw-bold">Ulica:</span> {{ sd.adres }}</div>
+                    <div><span class="fw-bold">Wspolrzedne:</span>{{ sd.latitude }} N {{ sd.longitude }} E </div>
+                    <div><span class="fw-bold">Cena PB95:</span> {{ sd.ron95 === 'X' ? 'Brak dostępnej ceny' : (sd.ron95 ? sd.ron95 + ' PLN' : 'Brak tego typu paliwa') }}</div>
+                    <div><span class="fw-bold">Cena PB98:</span> {{ sd.ron98 === 'X' ? 'Brak dostępnej ceny' : (sd.ron98 === null ? 'Brak tego typu paliwa' : sd.ron98 + ' PLN') }}</div>
+                    <div><span class="fw-bold">Cena ON:</span> {{ sd.on === 'X' ? 'Brak dostępnej ceny' : (sd.on ? sd.on + ' PLN' : 'Brak tego typu paliwa') }}</div>
+                    <div><span class="fw-bold">Cena LPG:</span> {{ sd.lpg === 'X' ? 'Brak dostępnej ceny' : (sd.lpg ? sd.lpg + ' PLN' : 'Brak tego typu paliwa') }}</div>
                 </div>
                 <span class="text-secondary">
                     <i class="fa-regular fa-trash-can fa-lg mouse-hover"></i>
+                    <i class="fa-regular fa-pen-to-square" (click)="populateForm(sd)"></i>
                 </span>
-            </li> 
+            </li>            
         </ul>
     </div>
 </div>
