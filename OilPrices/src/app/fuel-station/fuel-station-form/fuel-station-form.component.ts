@@ -17,12 +17,8 @@ export class FuelStationFormComponent {
 
   }
   onSubmit(form:NgForm){
-   
-    //  if (this.service.formData.id==0)
-    //  this.insertRecord(form)
-    // else
-    this.updateRecord(form)
-    
+       
+    this.updateRecord(form)    
     
   }
 

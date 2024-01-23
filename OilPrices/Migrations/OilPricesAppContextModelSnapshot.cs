@@ -22,40 +22,6 @@ namespace OilPrices.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-          //previous table that got deleted later  //modelBuilder.Entity("OilPrices.Models.FuelPrices", b =>
-            //    {
-            //        b.Property<short>("Id")
-            //            .ValueGeneratedOnAdd()
-            //            .HasColumnType("smallint");
-
-            //        SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<short>("Id"));
-
-            //        b.Property<short>("FuelStationId")
-            //            .HasColumnType("smallint");
-
-            //        b.Property<string>("LPG")
-            //            .IsRequired()
-            //            .HasColumnType("nvarchar(10)");
-
-            //        b.Property<string>("ON")
-            //            .IsRequired()
-            //            .HasColumnType("nvarchar(10)");
-
-            //        b.Property<DateTime>("PriceEditDate")
-            //            .HasColumnType("datetime2");
-
-            //        b.Property<string>("RON95")
-            //            .IsRequired()
-            //            .HasColumnType("nvarchar(10)");
-
-            //        b.Property<string>("RON98")
-            //            .IsRequired()
-            //            .HasColumnType("nvarchar(10)");
-
-            //        b.HasKey("Id");
-
-            //        b.ToTable("FuelPrices");
-            //    });
 
             modelBuilder.Entity("OilPrices.Models.FuelStation", b =>
                 {
