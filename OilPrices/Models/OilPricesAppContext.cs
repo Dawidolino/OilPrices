@@ -6,9 +6,7 @@ namespace OilPrices.Models;
 
 public partial class OilPricesAppContext : DbContext
 {
-    public OilPricesAppContext()
-    {
-    }
+    
 
     public OilPricesAppContext(DbContextOptions<OilPricesAppContext> options)
         : base(options)
