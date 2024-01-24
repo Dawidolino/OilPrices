@@ -49,8 +49,7 @@ namespace OilPrices.Controllers
             return fuelStation;
         }
 
-        // PUT: api/FuelStations/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        // PUT: api/FuelStations/5        
         [HttpPut("{id}")]
         public async Task<IActionResult> PutFuelStation(short id, FuelStation fuelStation)
         {
@@ -77,11 +76,10 @@ namespace OilPrices.Controllers
                 }
             }
 
-            return Ok(await _context.FuelStations.ToListAsync());//NoContent();
+            return Ok(await _context.FuelStations.ToListAsync());
     }
 
-        // POST: api/FuelStations
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        // POST: api/FuelStations        
         [HttpPost]
         public async Task<ActionResult<FuelStation>> PostFuelStation(FuelStation fuelStation)
         {
@@ -126,7 +124,7 @@ namespace OilPrices.Controllers
             _context.FuelStations.Remove(fuelStation);
             await _context.SaveChangesAsync();
 
-            return Ok(await _context.FuelStations.ToListAsync()); // NoContent();
+            return Ok(await _context.FuelStations.ToListAsync()); 
     }
 
         private bool FuelStationExists(short id)
