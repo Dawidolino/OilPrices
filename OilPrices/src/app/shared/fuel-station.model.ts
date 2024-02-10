@@ -1,12 +1,12 @@
 export class FuelStation {
    
     id: number=0;
-    nazwa: string="";
-    adres?: string;
-    miejscowosc: string="";
-    kodPocztowy?: string;
-    wojewodztwo: string="";
-    powiat: string="";
+    name: string="";
+    adress?: string;
+    city: string="";
+    postalCode?: string;
+    voivodeship: string="";
+    county: string="";
     ron95?: string;
     ron98?: string;
     on?: string;

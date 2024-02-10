@@ -11,10 +11,10 @@
         <ul class="list-group">
             <li class="list-group-item d-flex justify-content-between align-items-start mb-2 border px-4 py-3 rounded-3" *ngFor="let sd of service.list"> <!--station data-->
                 <div flex-grow-1 mouse-hover >             
-                    <div><span class="fw-bold">Nazwa stacji:</span> {{ sd.nazwa }}</div>
-                    <div><span class="fw-bold">Powiat:</span> {{ sd.powiat }}</div>
-                    <div><span class="fw-bold">Miejscowosc:</span> {{ sd.miejscowosc }}</div>
-                    <div><span class="fw-bold">Ulica:</span> {{ sd.adres }}</div>
+                    <div><span class="fw-bold">Nazwa stacji:</span> {{ sd.name }}</div>
+                    <div><span class="fw-bold">Powiat:</span> {{ sd.county }}</div>
+                    <div><span class="fw-bold">Miejscowosc:</span> {{ sd.city }}</div>
+                    <div><span class="fw-bold">Ulica:</span> {{ sd.adress }}</div>
                     <div><span class="fw-bold">Wspolrzedne:</span>{{ sd.latitude }} N {{ sd.longitude }} E </div>
                     <div><span class="fw-bold">Cena PB95:</span> {{ sd.ron95 === 'X' ? 'Brak dostępnej ceny' : (sd.ron95 ? sd.ron95 + ' PLN' : 'Brak tego typu paliwa') }}</div>
                     <div><span class="fw-bold">Cena PB98:</span> {{ sd.ron98 === 'X' ? 'Brak dostępnej ceny' : (sd.ron98 === null ? 'Brak tego typu paliwa' : sd.ron98 + ' PLN') }}</div>
