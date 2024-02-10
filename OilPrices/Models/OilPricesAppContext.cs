@@ -25,25 +25,25 @@ public partial class OilPricesAppContext : DbContext
             entity.Property(e => e.Id)
                 .ValueGeneratedNever()
                 .HasColumnName("ID");
-            entity.Property(e => e.Adres)
+            entity.Property(e => e.Adress)
                 .HasMaxLength(100)
                 .HasColumnName("ADRES");
-            entity.Property(e => e.KodPocztowy)
+            entity.Property(e => e.PostalCode)
                 .HasMaxLength(50)
                 .HasColumnName("KOD_POCZTOWY");
             entity.Property(e => e.Lpg)
                 .HasMaxLength(10)
                 .HasColumnName("LPG");
-            entity.Property(e => e.Miejscowosc)
+            entity.Property(e => e.City)
                 .HasMaxLength(50)
                 .HasColumnName("MIEJSCOWOSC");
-            entity.Property(e => e.Nazwa)
+            entity.Property(e => e.Name)
                 .HasMaxLength(200)
                 .HasColumnName("NAZWA");
             entity.Property(e => e.On)
                 .HasMaxLength(10)
                 .HasColumnName("ON");
-            entity.Property(e => e.Powiat)
+            entity.Property(e => e.County)
                 .HasMaxLength(50)
                 .HasColumnName("POWIAT");
             entity.Property(e => e.Ron95)
@@ -52,7 +52,7 @@ public partial class OilPricesAppContext : DbContext
             entity.Property(e => e.Ron98)
                 .HasMaxLength(10)
                 .HasColumnName("RON98");
-            entity.Property(e => e.Wojewodztwo)
+            entity.Property(e => e.Voivodeship)
                 .HasMaxLength(50)
                 .HasColumnName("WOJEWODZTWO");
         });

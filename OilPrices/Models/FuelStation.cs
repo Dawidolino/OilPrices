@@ -7,17 +7,17 @@ public partial class FuelStation
 {
     public short Id { get; set; }
 
-    public string Nazwa { get; set; } = null!;
+    public string Name { get; set; } = null!;
 
-    public string? Adres { get; set; }
+    public string? Adress { get; set; }
 
-    public string Miejscowosc { get; set; } = null!;
+    public string City { get; set; } = null!;
 
-    public string? KodPocztowy { get; set; }
+    public string? PostalCode { get; set; }
 
-    public string Wojewodztwo { get; set; } = null!;
+    public string Voivodeship { get; set; } = null!;
 
-    public string Powiat { get; set; } = null!;
+    public string County { get; set; } = null!;
 
     public string? Ron95 { get; set; }
 
