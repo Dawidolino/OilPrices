@@ -36,7 +36,7 @@ export class FuelStationComponent implements OnInit {
       // Filter the original list based on the search location
       this.service.list = this.originalList.filter(
         (station) =>
-          station.miejscowosc.toLowerCase().includes(this.searchLocation.toLowerCase())
+          station.city.toLowerCase().includes(this.searchLocation.toLowerCase())
       );
         } else {
         // If the search location is empty, restore the original list
