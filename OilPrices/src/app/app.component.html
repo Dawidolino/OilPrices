@@ -1,10 +1,36 @@
-<div class="bg-body-secondary text-center py-5 rounded-2">
-  <h1 class="dispay-6 fw-bold">Stacje paliwowe w Polsce</h1>
-</div>
+
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Stacje paliwowe w Polsce</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="fuel-stations">Lista stacji</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Ulubione</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li> -->
+      </ul>
+    </div>
+  </div>
+</nav>
+
 <div class="container">
     <div class="row">
       <div class="col-8 offset-2">
-        <app-fuel-station></app-fuel-station>
+        Mapa xd
+        <!-- <app-fuel-station></app-fuel-station> -->
       </div>
     </div>
   </div>
+  <router-outlet></router-outlet>

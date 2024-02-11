@@ -2,12 +2,13 @@ import { Component, NgModule } from '@angular/core';
 import { FuelStationService } from '../../shared/fuel-station.service';
 import { FormsModule, NgForm } from '@angular/forms';
 import { FuelStation } from '../../shared/fuel-station.model';
+import { RouterModule } from '@angular/router';
 
 
 @Component({
   selector: 'app-fuel-station-form',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule,RouterModule],
   templateUrl: './fuel-station-form.component.html',
   styles: ``
 })

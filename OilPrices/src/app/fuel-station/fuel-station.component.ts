@@ -5,13 +5,14 @@ import { NgFor } from '@angular/common';
 import { NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { FuelStation } from '../shared/fuel-station.model';
+import { RouterModule } from '@angular/router';
 
 @Component({
     selector: 'app-fuel-station',
     standalone: true,
     templateUrl: './fuel-station.component.html',
     styles: ``,
-    imports: [FuelStationFormComponent,NgFor, NgIf,FormsModule], 
+    imports: [FuelStationFormComponent,NgFor, NgIf,FormsModule, RouterModule], 
     providers: [FuelStationService] 
 })
 
