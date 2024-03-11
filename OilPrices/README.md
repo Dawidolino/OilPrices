@@ -1,27 +1,11 @@
 # OilPrices
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
+A fullstack app made for my Engineer's Thesis about usage of MVC in projects. 
+It allows users to enter prices of fuel available on fuel stations across Poland. 
+Backend was made in ASP .NET 7 with an use of a python script (Google Maps API) to generate coordinates of each station in DB based on their adress. 
+The view part (frontend) was made in Angular 17 using bootstrap. 
+Design based on YT tutorial about CRUDs.
 
-## Development server
+Currently working on a map with markers of each station based on the coordinates.
+The old version of the project is in a second branch.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
